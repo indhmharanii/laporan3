@@ -1,0 +1,26 @@
+{
+  "info": {
+    "name": "Inventory API v1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register"
+    },
+    {
+      "name": "Login"
+    },
+    {
+      "name": "Get Categories"
+    },
+    {
+      "name": "Post Categories"
+    },
+    {
+      "name": "Get Items"
+    },
+    {
+      "name": "Post Items"
+    }
+  ]
+}
