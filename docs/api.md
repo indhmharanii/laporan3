@@ -135,3 +135,8 @@ Body:
 ### DELETE /items/{id}
 
 Menghapus item (Admin Only).
+
+## GET /items?category_id={id}
+
+Description:
+Filter items by category, optional.

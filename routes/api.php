@@ -7,8 +7,12 @@ use App\Http\Controllers\CategoryController;
 
 Route::prefix('v1')->group(function () {
 
+
     Route::post('/register', [AuthController::class, 'register']);
     Route::post('/login', [AuthController::class, 'login']);
+
+    Route::apiResource('items', ItemController::class)
+        ->except(['destroy']);
 
     Route::middleware('auth:sanctum')->group(function () {
 
@@ -19,9 +23,6 @@ Route::prefix('v1')->group(function () {
             'categories/{category}',
             [CategoryController::class, 'destroy']
         )->middleware('role:admin');
-
-        Route::apiResource('items', ItemController::class)
-            ->except(['destroy']);
 
         Route::delete(
             'items/{item}',
