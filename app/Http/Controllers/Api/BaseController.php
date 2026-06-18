@@ -1,5 +1,3 @@
-
-//Membuat BaseController dengan Response Wrapper
 <?php
 
 namespace App\Http\Controllers\Api;
