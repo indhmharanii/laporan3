@@ -140,3 +140,9 @@ Menghapus item (Admin Only).
 
 Description:
 Filter items by category, optional.
+
+## Bonus Review
+Perbaikan dokumentasi untuk simulasi code review.
+
+## Tujuan Bonus Review
+Fitur Bonus Review digunakan untuk mensimulasikan proses code review menggunakan dua akun GitHub sebelum proses merge dilakukan.
