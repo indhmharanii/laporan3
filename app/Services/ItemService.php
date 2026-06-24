@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\Item;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\Log;
 
 class ItemService
 {
@@ -19,7 +20,14 @@ class ItemService
 
     public function create(array $data): Item
     {
-        return Item::create($data);
+        $item = Item::create($data);
+
+        Log::info('Item created', [
+            'id' => $item->id,
+            'data' => $data
+        ]);
+
+        return $item;
     }
 
     public function update($id, array $data): Item
@@ -28,11 +36,20 @@ class ItemService
 
         $item->update($data);
 
+        Log::info('Item updated', [
+            'id' => $id,
+            'changes' => $data
+        ]);
+
         return $item;
     }
 
     public function delete($id): void
     {
         Item::destroy($id);
+
+        Log::info('Item deleted', [
+            'id' => $id
+        ]);
     }
 }
